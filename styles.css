@@ -357,18 +357,24 @@
   .benefit-card p{ font-size:13.5px; color:var(--gray-500); }
 
   /* Report type cards */
-  .report-grid{ display:flex; flex-direction:column; gap:20px; }
-  .report-card{ display:grid; grid-template-columns:1fr 1fr; gap:32px; align-items:center; background:var(--white); border:1px solid var(--gray-200); border-radius:20px; padding:32px; }
+  .report-grid{ display:flex; flex-direction:column; gap:32px; }
+  .report-card{ display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:center; background:var(--white); border:1px solid var(--gray-200); border-radius:22px; padding:40px; }
   .report-card.reverse{ grid-template-columns:1fr 1fr; }
   .report-card.reverse .report-text{ order:2; }
   .report-card.reverse .report-visual-box{ order:1; }
   @media (max-width:860px){ .report-card, .report-card.reverse{ grid-template-columns:1fr; } .report-card.reverse .report-text{ order:1; } .report-card.reverse .report-visual-box{ order:2; } }
-  .report-text .eyebrow-light{ margin-bottom:8px; }
-  .report-text h3{ font-size:21px; margin-bottom:10px; }
-  .report-text p{ color:var(--gray-500); font-size:14.8px; margin-bottom:8px; }
+  .report-text .eyebrow-light{ margin-bottom:10px; }
+  .report-text h3{ font-size:22px; margin-bottom:14px; line-height:1.3; }
+  .report-text p{ color:var(--gray-500); font-size:15px; margin-bottom:12px; line-height:1.6; }
   .report-visual-box{
-    background:linear-gradient(160deg, #101F3C, #0C1930); border-radius:16px; padding:18px;
+    background:linear-gradient(160deg, #101F3C, #0C1930); border-radius:18px; padding:28px;
     border:1px solid rgba(255,255,255,0.09); box-shadow:var(--shadow-lg);
+    display:flex; flex-direction:column; gap:16px; min-height:220px; justify-content:center;
+  }
+  .report-visual-box:has(.report-img){ padding:0; overflow:hidden; min-height:0; }
+  .report-img{
+    width:100%; height:260px; display:block; object-fit:cover; object-position:top;
+    border-radius:18px;
   }
 
   /* Source system badges */
