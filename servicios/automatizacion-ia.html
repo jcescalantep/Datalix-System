@@ -37,16 +37,49 @@
   </div>
 
 <section class="hero" style="padding:56px 0 72px;">
-  <div class="container">
-    <div class="eyebrow"><span class="dot"></span>SERVICIO · AUTOMATIZACIÓN CON IA</div>
-    <h1 style="max-width:760px;">Automatiza las tareas repetitivas que le roban tiempo a tu equipo</h1>
-    <p class="lead" style="max-width:640px;">Diseñamos flujos de automatización e integraciones con inteligencia artificial para eliminar la consolidación manual de reportes, la carga de datos y la lectura de documentos.</p>
-    <div class="hero-actions">
-      <a href="../index.html#contacto" class="btn btn-primary">
-        Solicitar este servicio
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-      <a href="../index.html#servicios" class="btn btn-ghost">Ver todos los servicios</a>
+  <div class="container hero-grid" style="align-items:center;">
+    <div>
+      <div class="eyebrow"><span class="dot"></span>SERVICIO · AUTOMATIZACIÓN CON IA</div>
+      <h1 style="max-width:560px;">Automatiza las tareas repetitivas que le roban tiempo a tu equipo</h1>
+      <p class="lead" style="max-width:520px;">Diseñamos flujos de automatización e integraciones con inteligencia artificial para eliminar la consolidación manual de reportes, la carga de datos y la lectura de documentos.</p>
+      <div class="hero-actions">
+        <a href="../index.html#contacto" class="btn btn-primary">
+          Solicitar este servicio
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="../index.html#servicios" class="btn btn-ghost">Ver todos los servicios</a>
+      </div>
+    </div>
+    <div class="dash-card">
+      <div class="dash-topbar">
+        <div class="dash-dots"><span></span><span></span><span></span></div>
+        <div class="dash-title">flujo_automatizado — activo</div>
+      </div>
+      <div class="flow-row" style="margin-top:8px;">
+        <div class="flow-node-box">
+          <div class="fn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></svg></div>
+          <span>Documento</span>
+        </div>
+        <div class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        <div class="flow-node-box" style="border-color:rgba(0,217,163,0.35);">
+          <div class="fn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 00.34 1.87l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.7 1.7 0 00-1.87-.34 1.7 1.7 0 00-1 1.55V21a2 2 0 01-4 0v-.09A1.7 1.7 0 008 19.4a1.7 1.7 0 00-1.87.34l-.06.06a2 2 0 11-2.83-2.83l.06-.06A1.7 1.7 0 004.6 15a1.7 1.7 0 00-1.55-1H3a2 2 0 010-4h.09A1.7 1.7 0 004.6 9a1.7 1.7 0 00-.34-1.87l-.06-.06a2 2 0 112.83-2.83l.06.06A1.7 1.7 0 009 4.6a1.7 1.7 0 001-1.55V3a2 2 0 014 0v.09a1.7 1.7 0 001 1.55 1.7 1.7 0 001.87-.34l.06-.06a2 2 0 112.83 2.83l-.06.06A1.7 1.7 0 0019.4 9a1.7 1.7 0 001.55 1H21a2 2 0 010 4h-.09a1.7 1.7 0 00-1.51 1z"/></svg></div>
+          <span>IA + RPA</span>
+        </div>
+        <div class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        <div class="flow-node-box">
+          <div class="fn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
+          <span>Sistema listo</span>
+        </div>
+      </div>
+      <div class="chart-box" style="margin-top:14px;">
+        <svg viewBox="0 0 300 40">
+          <line class="flow-line" x1="10" y1="20" x2="290" y2="20"/>
+        </svg>
+      </div>
+      <div class="insight-row">
+        <div class="insight-chip"><span class="lbl">TIEMPO AHORRADO</span><span class="val up">-6h / semana</span></div>
+        <div class="insight-chip"><span class="lbl">PROCESOS ACTIVOS</span><span class="val">12</span></div>
+      </div>
     </div>
   </div>
 </section>
@@ -172,6 +205,13 @@
     <span>© 2026 Datalyx BI. Todos los derechos reservados.</span>
   </div>
 </footer>
+
+<script>
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); } });
+  }, {threshold:0.15});
+  document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
+</script>
 
 </body>
 </html>

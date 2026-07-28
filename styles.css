@@ -298,5 +298,87 @@
   .footer-links{ display:flex; gap:22px; }
   .footer-links a:hover{ color:var(--white); }
 
+  /* Diagram helpers — visuales temáticos por servicio */
+  .flow-node-box{
+    background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1);
+    border-radius:12px; padding:14px; text-align:center; flex:1;
+  }
+  .flow-node-box .fn-ic{ width:30px; height:30px; margin:0 auto 8px; color:var(--teal-400); }
+  .flow-node-box .fn-ic svg{ width:100%; height:100%; }
+  .flow-node-box span{ font-family:'JetBrains Mono', monospace; font-size:11px; color:rgba(255,255,255,0.8); display:block; }
+  .flow-row{ display:flex; align-items:center; gap:8px; }
+  .flow-arrow{ color:rgba(255,255,255,0.35); flex-shrink:0; }
+  .flow-arrow svg{ width:20px; height:20px; }
+  .flow-line{ stroke:var(--teal-400); stroke-width:2; fill:none; stroke-dasharray:5 5; animation:flowdash 1s linear infinite; }
+  @keyframes flowdash{ to{ stroke-dashoffset:-20; } }
+  .scatter-dot{ fill:var(--blue-400); opacity:0; animation:fadein .4s ease forwards; }
+  .scatter-trend{ stroke:var(--teal-400); stroke-width:2.5; fill:none; stroke-dasharray:260; stroke-dashoffset:260; animation:draw 1.6s ease forwards .2s; }
+  .insight-row{ display:flex; gap:10px; margin-top:12px; }
+  .insight-chip{
+    flex:1; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08);
+    border-radius:10px; padding:10px 12px;
+  }
+  .insight-chip .lbl{ font-family:'JetBrains Mono', monospace; font-size:10.5px; color:rgba(255,255,255,0.45); display:block; margin-bottom:4px; }
+  .insight-chip .val{ font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:16px; color:var(--white); }
+  .device-row{ display:flex; align-items:flex-end; gap:22px; justify-content:center; margin-top:16px; padding-top:14px; border-top:1px solid rgba(255,255,255,0.08); }
+  .device-item{ text-align:center; color:rgba(255,255,255,0.45); }
+  .device-item svg{ width:28px; height:28px; margin-bottom:6px; }
+  .device-item.active{ color:var(--teal-400); }
+  .device-item span{ font-family:'JetBrains Mono', monospace; font-size:10px; display:block; }
+  .hub-label{ font-family:'JetBrains Mono', monospace; font-size:9.5px; fill:rgba(255,255,255,0.75); }
+  .hub-dot{ fill:var(--teal-400); opacity:0; animation:fadein .4s ease forwards; }
+  .check-list{ display:flex; flex-direction:column; gap:10px; }
+  .check-item{ display:flex; align-items:center; gap:10px; opacity:0; animation:fadein .5s ease forwards; }
+  .check-item .ck{ width:20px; height:20px; border-radius:50%; background:rgba(0,217,163,0.15); border:1px solid var(--teal-400); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+  .check-item .ck svg{ width:11px; height:11px; }
+  .check-item span{ font-size:12.5px; color:rgba(255,255,255,0.8); font-family:'JetBrains Mono', monospace; }
+  .skill-bars{ display:flex; align-items:flex-end; gap:10px; height:70px; margin-top:14px; }
+  .skill-bars .bar{ animation:grow 1.2s cubic-bezier(.2,.8,.2,1) both; }
+
+  /* Pain points */
+  .pain-wrap{ background:var(--navy-950); color:var(--white); border-radius:24px; padding:52px 48px; }
+  @media (max-width:760px){ .pain-wrap{ padding:36px 24px; } }
+  .pain-eyebrow{ font-family:'JetBrains Mono', monospace; font-size:12.5px; font-weight:600; color:var(--orange-400); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:18px; display:block; }
+  .pain-grid{ display:flex; flex-direction:column; gap:22px; margin-bottom:26px; }
+  .pain-item{ display:flex; gap:16px; align-items:flex-start; }
+  .pain-item .pn{ font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:20px; color:rgba(255,255,255,0.25); flex-shrink:0; width:32px; }
+  .pain-item p{ font-size:19px; font-weight:600; color:var(--white); line-height:1.4; max-width:640px; }
+  .pain-note{ color:rgba(255,255,255,0.6); font-size:15px; max-width:600px; }
+
+  /* Benefit pill grid (6 items) */
+  .benefit-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+  @media (max-width:900px){ .benefit-grid{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:560px){ .benefit-grid{ grid-template-columns:1fr; } }
+  .benefit-card{ background:var(--white); border:1px solid var(--gray-200); border-radius:var(--radius); padding:24px 22px; transition:transform .18s ease, box-shadow .18s ease; }
+  .benefit-card:hover{ transform:translateY(-4px); box-shadow:0 20px 40px -18px rgba(10,22,40,0.16); }
+  .benefit-card .service-icon{ width:42px; height:42px; margin-bottom:14px; }
+  .benefit-card .service-icon svg{ width:20px; height:20px; }
+  .benefit-card h4{ font-size:15.5px; margin-bottom:6px; }
+  .benefit-card p{ font-size:13.5px; color:var(--gray-500); }
+
+  /* Report type cards */
+  .report-grid{ display:flex; flex-direction:column; gap:20px; }
+  .report-card{ display:grid; grid-template-columns:1fr 1fr; gap:32px; align-items:center; background:var(--white); border:1px solid var(--gray-200); border-radius:20px; padding:32px; }
+  .report-card.reverse{ grid-template-columns:1fr 1fr; }
+  .report-card.reverse .report-text{ order:2; }
+  .report-card.reverse .report-visual-box{ order:1; }
+  @media (max-width:860px){ .report-card, .report-card.reverse{ grid-template-columns:1fr; } .report-card.reverse .report-text{ order:1; } .report-card.reverse .report-visual-box{ order:2; } }
+  .report-text .eyebrow-light{ margin-bottom:8px; }
+  .report-text h3{ font-size:21px; margin-bottom:10px; }
+  .report-text p{ color:var(--gray-500); font-size:14.8px; margin-bottom:8px; }
+  .report-visual-box{
+    background:linear-gradient(160deg, #101F3C, #0C1930); border-radius:16px; padding:18px;
+    border:1px solid rgba(255,255,255,0.09); box-shadow:var(--shadow-lg);
+  }
+
+  /* Source system badges */
+  .source-strip{ display:flex; flex-wrap:wrap; gap:12px; justify-content:center; }
+  .source-badge{
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--white); border:1px solid var(--gray-200); border-radius:999px;
+    padding:9px 16px; font-size:13px; font-weight:600; color:var(--gray-700);
+  }
+  .source-badge .sb-dot{ width:8px; height:8px; border-radius:50%; background:var(--blue-600); }
+
   .fade-up{ opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease; }
   .fade-up.in{ opacity:1; transform:translateY(0); }

@@ -37,16 +37,46 @@
   </div>
 
 <section class="hero" style="padding:56px 0 72px;">
-  <div class="container">
-    <div class="eyebrow"><span class="dot"></span>SERVICIO · INTEGRACIONES Y APIS</div>
-    <h1 style="max-width:760px;">Conecta tus sistemas para que la información fluya sola</h1>
-    <p class="lead" style="max-width:640px;">Integramos tu ERP, CRM, hojas de cálculo y bases de datos para eliminar el copiar y pegar entre sistemas y mantener todo sincronizado.</p>
-    <div class="hero-actions">
-      <a href="../index.html#contacto" class="btn btn-primary">
-        Solicitar este servicio
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-      <a href="../index.html#servicios" class="btn btn-ghost">Ver todos los servicios</a>
+  <div class="container hero-grid" style="align-items:center;">
+    <div>
+      <div class="eyebrow"><span class="dot"></span>SERVICIO · INTEGRACIONES Y APIS</div>
+      <h1 style="max-width:560px;">Conecta tus sistemas para que la información fluya sola</h1>
+      <p class="lead" style="max-width:520px;">Integramos tu ERP, CRM, hojas de cálculo y bases de datos para eliminar el copiar y pegar entre sistemas y mantener todo sincronizado.</p>
+      <div class="hero-actions">
+        <a href="../index.html#contacto" class="btn btn-primary">
+          Solicitar este servicio
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="../index.html#servicios" class="btn btn-ghost">Ver todos los servicios</a>
+      </div>
+    </div>
+    <div class="dash-card">
+      <div class="dash-topbar">
+        <div class="dash-dots"><span></span><span></span><span></span></div>
+        <div class="dash-title">integraciones — sync activo</div>
+      </div>
+      <div class="chart-box" style="padding:18px;">
+        <svg viewBox="0 0 300 180">
+          <line class="flow-line" x1="150" y1="90" x2="60" y2="30"/>
+          <line class="flow-line" x1="150" y1="90" x2="240" y2="30"/>
+          <line class="flow-line" x1="150" y1="90" x2="50" y2="140"/>
+          <line class="flow-line" x1="150" y1="90" x2="250" y2="140"/>
+          <circle cx="150" cy="90" r="26" fill="rgba(0,217,163,0.12)" stroke="var(--teal-400)" stroke-width="2"/>
+          <text x="150" y="94" text-anchor="middle" class="hub-label" style="font-size:11px; fill:#00D9A3;">API</text>
+          <circle class="hub-dot" cx="60" cy="30" r="18" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.2)" style="animation-delay:.2s"/>
+          <text x="60" y="34" text-anchor="middle" class="hub-label">ERP</text>
+          <circle class="hub-dot" cx="240" cy="30" r="18" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.2)" style="animation-delay:.35s"/>
+          <text x="240" y="34" text-anchor="middle" class="hub-label">CRM</text>
+          <circle class="hub-dot" cx="50" cy="140" r="18" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.2)" style="animation-delay:.5s"/>
+          <text x="50" y="144" text-anchor="middle" class="hub-label">Excel</text>
+          <circle class="hub-dot" cx="250" cy="140" r="18" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.2)" style="animation-delay:.65s"/>
+          <text x="250" y="144" text-anchor="middle" class="hub-label">SQL</text>
+        </svg>
+      </div>
+      <div class="insight-row">
+        <div class="insight-chip"><span class="lbl">SISTEMAS CONECTADOS</span><span class="val">4</span></div>
+        <div class="insight-chip"><span class="lbl">SINCRONIZACIÓN</span><span class="val up">En vivo</span></div>
+      </div>
     </div>
   </div>
 </section>
@@ -172,6 +202,13 @@
     <span>© 2026 Datalyx BI. Todos los derechos reservados.</span>
   </div>
 </footer>
+
+<script>
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); } });
+  }, {threshold:0.15});
+  document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
+</script>
 
 </body>
 </html>

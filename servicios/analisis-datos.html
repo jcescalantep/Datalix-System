@@ -37,16 +37,45 @@
   </div>
 
 <section class="hero" style="padding:56px 0 72px;">
-  <div class="container">
-    <div class="eyebrow"><span class="dot"></span>SERVICIO · ANÁLISIS DE DATOS</div>
-    <h1 style="max-width:760px;">Convierte años de datos históricos en decisiones concretas</h1>
-    <p class="lead" style="max-width:640px;">Limpiamos, ordenamos y analizamos tu información histórica para encontrar patrones, oportunidades de ahorro y riesgos que hoy pasan desapercibidos.</p>
-    <div class="hero-actions">
-      <a href="../index.html#contacto" class="btn btn-primary">
-        Solicitar este servicio
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-      <a href="../index.html#servicios" class="btn btn-ghost">Ver todos los servicios</a>
+  <div class="container hero-grid" style="align-items:center;">
+    <div>
+      <div class="eyebrow"><span class="dot"></span>SERVICIO · ANÁLISIS DE DATOS</div>
+      <h1 style="max-width:560px;">Convierte años de datos históricos en decisiones concretas</h1>
+      <p class="lead" style="max-width:520px;">Limpiamos, ordenamos y analizamos tu información histórica para encontrar patrones, oportunidades de ahorro y riesgos que hoy pasan desapercibidos.</p>
+      <div class="hero-actions">
+        <a href="../index.html#contacto" class="btn btn-primary">
+          Solicitar este servicio
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="../index.html#servicios" class="btn btn-ghost">Ver todos los servicios</a>
+      </div>
+    </div>
+    <div class="dash-card">
+      <div class="dash-topbar">
+        <div class="dash-dots"><span></span><span></span><span></span></div>
+        <div class="dash-title">analisis_ventas.csv — procesado</div>
+      </div>
+      <div class="chart-box" style="margin-bottom:12px;">
+        <svg viewBox="0 0 300 140">
+          <line x1="0" y1="120" x2="300" y2="120" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+          <path class="scatter-trend" d="M10,110 L60,95 L110,80 L160,65 L210,45 L260,25"/>
+          <circle class="scatter-dot" cx="15" cy="105" r="4" style="animation-delay:.2s"/>
+          <circle class="scatter-dot" cx="45" cy="115" r="4" style="animation-delay:.3s"/>
+          <circle class="scatter-dot" cx="70" cy="90" r="4" style="animation-delay:.4s"/>
+          <circle class="scatter-dot" cx="100" cy="98" r="4" style="animation-delay:.5s"/>
+          <circle class="scatter-dot" cx="130" cy="72" r="4" style="animation-delay:.6s"/>
+          <circle class="scatter-dot" cx="155" cy="80" r="4" style="animation-delay:.7s"/>
+          <circle class="scatter-dot" cx="185" cy="55" r="4" style="animation-delay:.8s"/>
+          <circle class="scatter-dot" cx="215" cy="60" r="4" style="animation-delay:.9s"/>
+          <circle class="scatter-dot" cx="240" cy="35" r="4" style="animation-delay:1s"/>
+          <circle class="scatter-dot" cx="270" cy="22" r="4" style="animation-delay:1.1s"/>
+        </svg>
+      </div>
+      <div class="insight-row">
+        <div class="insight-chip"><span class="lbl">TENDENCIA</span><span class="val up">▲ 18%</span></div>
+        <div class="insight-chip"><span class="lbl">CORRELACIÓN</span><span class="val">0.87</span></div>
+        <div class="insight-chip"><span class="lbl">ANOMALÍAS</span><span class="val down">3 detectadas</span></div>
+      </div>
     </div>
   </div>
 </section>
@@ -172,6 +201,13 @@
     <span>© 2026 Datalyx BI. Todos los derechos reservados.</span>
   </div>
 </footer>
+
+<script>
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); } });
+  }, {threshold:0.15});
+  document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
+</script>
 
 </body>
 </html>

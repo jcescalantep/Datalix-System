@@ -37,16 +37,36 @@
   </div>
 
 <section class="hero" style="padding:56px 0 72px;">
-  <div class="container">
-    <div class="eyebrow"><span class="dot"></span>SERVICIO · CONSULTORÍA Y CAPACITACIÓN</div>
-    <h1 style="max-width:760px;">Forma a tu equipo para que sea autónomo en Power BI y Excel avanzado</h1>
-    <p class="lead" style="max-width:640px;">Capacitamos a tus colaboradores para que puedan mantener, ajustar y ampliar sus propios dashboards, sin depender de un tercero para cada cambio.</p>
-    <div class="hero-actions">
-      <a href="../index.html#contacto" class="btn btn-primary">
-        Solicitar este servicio
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-      <a href="../index.html#servicios" class="btn btn-ghost">Ver todos los servicios</a>
+  <div class="container hero-grid" style="align-items:center;">
+    <div>
+      <div class="eyebrow"><span class="dot"></span>SERVICIO · CONSULTORÍA Y CAPACITACIÓN</div>
+      <h1 style="max-width:560px;">Forma a tu equipo para que sea autónomo en Power BI y Excel avanzado</h1>
+      <p class="lead" style="max-width:520px;">Capacitamos a tus colaboradores para que puedan mantener, ajustar y ampliar sus propios dashboards, sin depender de un tercero para cada cambio.</p>
+      <div class="hero-actions">
+        <a href="../index.html#contacto" class="btn btn-primary">
+          Solicitar este servicio
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="../index.html#servicios" class="btn btn-ghost">Ver todos los servicios</a>
+      </div>
+    </div>
+    <div class="dash-card">
+      <div class="dash-topbar">
+        <div class="dash-dots"><span></span><span></span><span></span></div>
+        <div class="dash-title">plan_capacitacion — en progreso</div>
+      </div>
+      <div class="check-list" style="margin-bottom:14px;">
+        <div class="check-item" style="animation-delay:.1s"><div class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="#00D9A3" stroke-width="3"><path d="M5 12l5 5L19 7"/></svg></div><span>Fundamentos de Power BI</span></div>
+        <div class="check-item" style="animation-delay:.3s"><div class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="#00D9A3" stroke-width="3"><path d="M5 12l5 5L19 7"/></svg></div><span>Modelado de datos</span></div>
+        <div class="check-item" style="animation-delay:.5s"><div class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="#00D9A3" stroke-width="3"><path d="M5 12l5 5L19 7"/></svg></div><span>Excel avanzado</span></div>
+        <div class="check-item" style="animation-delay:.7s"><div class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="#00D9A3" stroke-width="3"><path d="M5 12l5 5L19 7"/></svg></div><span>Mantenimiento autónomo</span></div>
+      </div>
+      <div class="skill-bars">
+        <div class="bar" style="height:30%; animation-delay:.1s"></div>
+        <div class="bar" style="height:48%; animation-delay:.2s"></div>
+        <div class="bar" style="height:66%; animation-delay:.3s"></div>
+        <div class="bar" style="height:90%; animation-delay:.4s"></div>
+      </div>
     </div>
   </div>
 </section>
@@ -172,6 +192,13 @@
     <span>© 2026 Datalyx BI. Todos los derechos reservados.</span>
   </div>
 </footer>
+
+<script>
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); } });
+  }, {threshold:0.15});
+  document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
+</script>
 
 </body>
 </html>
